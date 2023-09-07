@@ -1,22 +1,24 @@
 ﻿#include <iostream>
 using namespace std;
 
-//2
+const int Size = 9;
+
 void sum(int num[])
 {
-    int nul = 0;
-    for (int i = 0; i < 9; i++)
+    float nul = 0;
+    for (int i = 0; i < Size; i++)
     {
             nul = nul + num[i];
     }
-    cout << "Cумма элементов масива: " << nul << "\n";
+    nul = nul / Size;
+    cout << "Cредние арифметическое элементов масива: " << nul << "\n";
 }
 
 int main()
 {
     setlocale(LC_ALL, "");
-    int num[9]{ 2, 3, 5, 7, 87, 34, 54, 786, 2 };
-    for (int i = 0; i < 9; i++) 
+    int num[Size]{ 2, 3, 5, 7, 87, 34, 54, 786, 2 };
+    for (int i = 0; i < Size; i++) 
     {
         cout << num[i] << " ";
     }
@@ -25,11 +27,10 @@ int main()
     sum(num);
 }
 
-//3
 //void ot(int num[])
 //{
 //    int ot = 0;
-//    for (int i = 0; i < 9; i++)
+//    for (int i = 0; i < Size; i++)
 //    {
 //        if (num[i] < 0)
 //        {
@@ -41,7 +42,7 @@ int main()
 //void pl(int num[])
 //{
 //    int pl = 0;
-//    for (int i = 0; i < 9; i++)
+//    for (int i = 0; i < Size; i++)
 //    {
 //        if (num[i] > 0)
 //        {
@@ -53,7 +54,7 @@ int main()
 //void nul(int num[])
 //{
 //    int nul = 0;
-//    for (int i = 0; i < 9; i++)
+//    for (int i = 0; i < Size; i++)
 //    {
 //        if (num[i] == 0)
 //        {
@@ -66,7 +67,7 @@ int main()
 //int main()
 //{
 //    setlocale(LC_ALL, "");
-//    int num[9]{ 2, -3, 3, 5, 87, 0, -5, 5, -82 };
+//    int num[Size]{ 2, -3, 3, 5, 87, 0, -5, 5, -82 };
 //    for (int i = 0; i < 9; i++) 
 //    {
 //        cout << num[i] << " ";
